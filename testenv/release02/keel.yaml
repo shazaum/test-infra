@@ -27,7 +27,7 @@ spec:
             - name: PUBSUB
               value: "1"
             - name: PROJECT_ID
-              value: "costin-istio"
+              value: "istio-testing"
             - name: GCLOUD_KEY_FILE
               value: "/var/keel/keel-secret.json"
             - name: "GOOGLE_APPLICATION_CREDENTIALS"

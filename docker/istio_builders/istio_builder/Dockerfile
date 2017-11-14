@@ -32,8 +32,8 @@ RUN apt-get update \
 RUN  gem install --no-ri --no-rdoc fpm pleaserun
 
 # Install kubectl and minikube
-RUN curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/v1.7.4/bin/linux/amd64/kubectl && chmod +x kubectl && sudo mv kubectl /usr/local/bin/ \
-   curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.22.3/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
+RUN curl -L -o kubectl https://storage.googleapis.com/kubernetes-release/release/v1.7.4/bin/linux/amd64/kubectl && chmod +x kubectl && sudo mv kubectl /usr/local/bin/ \
+   && curl -L -o minikube https://storage.googleapis.com/minikube/releases/v0.22.3/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
 
 # Add a default user and group
 RUN addgroup --gid 1000 istio-builder
